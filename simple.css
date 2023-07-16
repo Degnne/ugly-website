@@ -4,3 +4,16 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+a#say-hello {
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+a#say-hello:hover {
+    background-color: darkgray;
+    color: white;
+}

@@ -1,6 +1,6 @@
 body {
     background-image: linear-gradient(66deg, red, orange, yellow, green, cyan, blue, purple, pink, black, brown);
-    animation-name: background-motion;
+    animation-name: background-motion, change-cursor;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     cursor: crosshair;
@@ -33,8 +33,7 @@ main {
 }
 
 .pulsate:hover {
-    scale: 2;
-    cursor:text;  
+    scale: 2;  
     border: 20px dotted yellowgreen;  
 }
 
@@ -99,6 +98,15 @@ footer {
     animation-name: rotate;
     animation-duration: 1s;
     animation-iteration-count: infinite;
+}
+
+@keyframes change-cursor {
+    0% { cursor: pointer; }
+    20% { cursor: alias; }
+    40% { cursor:crosshair; }
+    60% { cursor: progress; }
+    80% { cursor: wait; }
+    100% { cursor: text; }
 }
 
 @keyframes rotate {
