@@ -18,9 +18,21 @@ main {
     flex-direction: column;
 }
 
+#hello-computer {
+    position: absolute;
+    animation-name: rotate2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 150px;
+    box-shadow: 50px 50px 40px 20px rgb(59, 56, 58);
+}
+
 .pulsate {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 150px;
     animation-name: pulsate, rotate;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -95,6 +107,7 @@ footer {
     right: 50px;
     font-size: 2rem;
     color: red;
+    border: 2px dashed greenyellow;
     animation-name: rotate;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -118,12 +131,21 @@ footer {
     100% { transform: rotate(359deg); }
 }
 
+@keyframes rotate2 {
+    0% { transform: rotate(265deg); }
+    10% { transform: rotate(100deg); }
+    30% { transform: rotate(90deg); }
+    50% { transform: rotate(200deg); }
+    65% { transform: rotate(160deg); }
+    100% { transform: rotate(5deg); }
+}
+
 @keyframes change-border {
-    0% { border: 5px solid white; }
-    25% { border: 3px dashed white; }
-    50% { border: 7px dotted white; }
-    75% { border: 4px groove white; }
-    100% { border: 6px double white; }    
+    0% { border: 5px solid rgb(138, 58, 58); }
+    25% { border: 3px dashed rgb(21, 32, 129); }
+    50% { border: 7px dotted rgb(150, 238, 36); }
+    75% { border: 4px groove rgb(59, 165, 207); }
+    100% { border: 6px double rgb(238, 9, 97); }    
 }
 
 @keyframes background-motion {
@@ -171,9 +193,19 @@ footer {
     100% {top: 400px; right: 450px;}
 }
 
-.trail { /* className for the trail elements */
-    position: absolute;
-    height: 20px; width: 20px;
-    border-radius: 20px;
-    background-image: linear-gradient(66deg, red, orange, yellow, green, cyan, blue, purple, pink, black, brown);
-  }
+::-webkit-scrollbar {
+    width: 100px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #2f00ff;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(247, 0, 255);
+    border-radius: 17% 5% 23% 45%;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(94, 255, 0);
+}
